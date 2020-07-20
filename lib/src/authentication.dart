@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:uni_links/uni_links.dart';
 
-enum Provider { google, facebook }
+enum Provider { google, facebook, apple }
 
 extension ProviderExt on Provider {
   String get name {
@@ -14,6 +14,8 @@ extension ProviderExt on Provider {
         return "Google";
       case Provider.facebook:
         return "Facebook";
+      case Provider.apple:
+        return "SignInWithApple";
         break;
       default:
         throw "Provider null!";
